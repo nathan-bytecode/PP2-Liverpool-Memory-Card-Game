@@ -11,6 +11,10 @@ body {
     background-color: red;
 }
 
+img {
+    width: 100px;
+}
+
 .memory-game{
 
 }
@@ -24,5 +28,5 @@ body {
 }
 
 .back-face{
-    
+
 }
