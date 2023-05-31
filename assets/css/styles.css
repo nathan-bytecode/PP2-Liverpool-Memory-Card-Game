@@ -26,7 +26,7 @@ img {
 .memory-game {
     margin: 0 auto;
     width: 525px;
-    height: 1000px;
+    height: 525px;
     display: flex;
     flex-wrap: wrap;
     border: 2px solid lime;
@@ -34,7 +34,7 @@ img {
 
 .memory-card{
     width: 25%;
-    height: 20%;
+    height: 33.333%;
     position: relative;
     border: 2px solid aqua;
 }
