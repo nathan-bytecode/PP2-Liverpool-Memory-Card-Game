@@ -9,6 +9,8 @@
 body {
     height: 100vh;
     background-color: #d01317;
+    color: #ffffff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .wrapper {
