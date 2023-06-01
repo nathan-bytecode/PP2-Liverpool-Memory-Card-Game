@@ -8,7 +8,11 @@
 
 body {
     height: 100vh;
-    background-color: red;
+    background-color: #d01317;
+}
+
+.wrapper {
+    
 }
 
 h1 {
@@ -30,7 +34,7 @@ img {
     display: flex;
     flex-wrap: wrap;
     perspective: 1000px;
-    border: 2px solid lime;
+   
 }
 
 .memory-card{
@@ -40,7 +44,7 @@ img {
     transform: scale(1);
     transform-style: preserve-3d;
     transition: transform .5s;
-    border: 2px solid aqua;
+    border: 2px solid #ffffff;
 }
 
 .memory-card:active {
