@@ -80,6 +80,10 @@ function flipCard(){
     rating();
     }
 
+
+    //Game Start
+    function start() {
+        
     //Timer
     const timerContainer = document.querySelector(".timer");
     let liveTimer,
@@ -99,6 +103,10 @@ function flipCard(){
     function stopTimer() {
     clearInterval(liveTimer);
     }
+        
+      }
+    
+
 
     //Game Restart
     function restart() {
