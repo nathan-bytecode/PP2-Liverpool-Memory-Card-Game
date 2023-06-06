@@ -4,6 +4,7 @@ const cards = document.querySelectorAll('.memory-card');
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
+let matchCounter = 0;
 
 function flipCard(){
     if (lockBoard) return;
@@ -29,6 +30,17 @@ function flipCard(){
     //If cards match it will freeze those cards and it will prevent them from flipping back - managed with dataset html atribute
     function checkForMatch(){
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
+
+    if(isMatch){
+        matchCounter+=1;
+       disableCards();
+         if(matchCounter==(cards.length/2)){
+              stopTimer();
+              window.alert("Congratulations you scouser! You Won! Look at how many moves and how long it took you to finish! You'll Never Walk Alone!");
+          }
+       }
+       else{ unflipCards(); }
+    
 
     isMatch ? disableCards() : unflipCards();
     }
