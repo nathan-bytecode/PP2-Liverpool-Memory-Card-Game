@@ -7,7 +7,10 @@
 
     <!--Link to css stylesheet-->
     <link rel="stylesheet" href="assets/css/styles.css">
-    
+
+    <!--Embedded code for font awesome icons-->
+    <script src="https://kit.fontawesome.com/c20358358b.js" crossorigin="anonymous"></script>
+
     <title>Liverpool Memory Card Game</title>
 </head>
 <body>
@@ -16,7 +19,7 @@
         <!--Class for entire game field-->
         <section class="memory-game">
 
-            <!--Each memory card given a unique football player image and copied twice to generate a pair-->
+            <!--Each memory card given a unique football player image and copied twice to generate a -->
             <div class="memory-card" data-framework="steven-gerrard">
                 <img class="front-face" src="assets/images/liverpool-folder/steven-gerrard.jpg" alt="Steven Gerrard">
                 <img class="back-face" src="assets/images/liverpool-folder/lfc-badge.jpg" alt="Liverpool Bird Logo">
@@ -71,30 +74,19 @@
                 <img class="back-face" src="assets/images/liverpool-folder/lfc-badge.jpg" alt="Liverpool Bird Logo">
             </div>
         </section>
-
-
+        <!--Social Media icons with start timer button, timer count, moves count and restart game button-->
         <div class="icons">
             <div class="bottom-elements">
                 <p>
-
-                    <!--Start Timer button and function-->
                 <div class="actions">
                 <button onclick="start()" style="margin-right: 20px;">Start Timer</button>
                 </div>
-
-                <!--Timer Count display-->
                 Timer: <span class="timer" style="margin-right: 20px;"></span>
-
-                <!--Moves Count display-->
                 Moves: <span class="moves" style="margin-right: 20px;"></span>
-
-                <!--Restart Game button and function-->
                 <div class="actions">
                     <button onclick="restart()" style="margin-right: 50px;">Restart Game</button>
                 </div>
                 </p>
-
-                <!--Social Meida icons link, for further contact or support if needed-->
                 <footer>
                     <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook fa-2xl"></i></a>
                     <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram fa-2xl" style="padding-left: 20px; padding-right: 20px;"></i></a>
