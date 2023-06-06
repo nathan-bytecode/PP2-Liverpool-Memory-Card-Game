@@ -68,6 +68,31 @@ function flipCard(){
     rating();
     }
 
+    //Timer
+    const timerContainer = document.querySelector(".timer");
+    let liveTimer,
+    totalSeconds = 0;
+
+    timerContainer.innerHTML = totalSeconds + ' s';
+
+    function startTimer() {
+    liveTimer = setInterval(function() {
+        totalSeconds++;
+        timerContainer.innerHTML = totalSeconds + 's';
+    }, 1000);
+    }
+
+    startTimer()
+ 
+    function stopTimer() {
+    clearInterval(liveTimer);
+    }
+
+    //Game Restart
+    function restart() {
+    location.reload();
+  }
+
     //If second card match with first card it will return from the function
     function resetBoard(){
     [hasFlippedCard, lockBoard] = [false, false];
