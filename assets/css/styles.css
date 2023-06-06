@@ -13,32 +13,32 @@ body {
     font-family: 'Lucida Sans', sans-serif;
 }
 
-.wrapper {
-    
-}
-
+/* Heading style*/
 h1 {
     margin-bottom: 3px;
     display: flex;
     justify-content: center;
 }
 
+/* Image settings to fit border-box nicely */
 img {
     width: 100px;
     height: 150px;
 }
 
+/* Social Meida Icons and elements display*/
 .icons {
     margin-top: 10px;
     display: flex;
     justify-content: center;
 }
 
+/* Anchor element style to white as couldn't remove hyperlink no what I done*/
 a {
     color: #ffffff;
 }
 
-
+/* Game field style*/
 .memory-game {
     margin: 0 auto;
     width: 525px;
@@ -49,6 +49,7 @@ a {
    
 }
 
+/* Class style to edit all images in similar manner*/
 .memory-card{
     width: 25%;
     height: 33.333%;
@@ -59,15 +60,17 @@ a {
     border: 2px solid #ffffff;
 }
 
+/* To have flip transform time effect*/
 .memory-card:active {
     transform: scale(.97);
     transition: transform .2s;
 }
-
+/* To flip card from back to front and front to back*/
 .memory-card.flip {
     transform: rotateY(180deg);
 }
 
+/* To hide front face of card by covering with back */
 .front-face, .back-face {
     width: 100%;
     height: 100%;
@@ -77,10 +80,12 @@ a {
     border: 2px solid deeppink;
 }
 
+/* To flip front face back when needed */
 .front-face{
     transform: rotateY(180deg);
 }
 
+/* To style start, restart, time count, move count elements in line with social media icons */
 .bottom-elements {
     display: flex; 
 }

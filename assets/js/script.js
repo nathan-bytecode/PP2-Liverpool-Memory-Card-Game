@@ -1,6 +1,6 @@
 const cards = document.querySelectorAll('.memory-card');
 
-//On first flipped card if match with second flipped card it will lock both cards
+// On first flipped card if match with second flipped card it will lock both cards
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
@@ -27,7 +27,7 @@ function flipCard(){
         
     }
     
-    //If cards match it will freeze those cards and it will prevent them from flipping back - managed with dataset html atribute
+    // If cards match it will freeze those cards and it will prevent them from flipping back - managed with dataset html atribute
     function checkForMatch(){
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
 
@@ -45,7 +45,7 @@ function flipCard(){
     isMatch ? disableCards() : unflipCards();
     }
 
-    //Matched card will be disabled for clicks once they are flipped
+    // Matched card will be disabled for clicks once they are flipped
     function disableCards(){
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
@@ -54,7 +54,7 @@ function flipCard(){
     resetBoard();
     }
 
-    //If cards don't match it will flip the cards back in 0.5s and you will have a new attempt to make
+    // If cards don't match it will flip the cards back in 0.5s and you will have a new attempt to make
     function unflipCards(){
     lockBoard = true;
 
@@ -69,7 +69,7 @@ function flipCard(){
 
     }
 
-    //Moves
+    // Moves
     const movesContainer = document.querySelector(".moves");
     let moves = 0;
     movesContainer.innerHTML = 0;
@@ -81,10 +81,10 @@ function flipCard(){
     }
 
 
-    //Game Start
+    // Game Start
     function start() {
         
-    //Timer
+    // Timer
     const timerContainer = document.querySelector(".timer");
     let liveTimer,
     totalSeconds = 0;
@@ -102,16 +102,12 @@ function flipCard(){
  
     function stopTimer() {
     clearInterval(liveTimer);
-    }
-        
-      }
+    }}
     
-
-
     //Game Restart
     function restart() {
     location.reload();
-  }
+    }
 
     //If second card match with first card it will return from the function
     function resetBoard(){
@@ -127,5 +123,4 @@ function flipCard(){
     });
     })();
 
-    cards.forEach(card => card.addEventListener('click', flipCard))
-
+    cards.forEach(card => card.addEventListener('click', flipCard));
