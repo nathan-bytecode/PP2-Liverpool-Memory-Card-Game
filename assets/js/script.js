@@ -1,5 +1,6 @@
 const cards = document.querySelectorAll('.memory-card');
 
+//On first flipped card if match with second flipped card it will lock both cards
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
@@ -22,22 +23,27 @@ function flipCard(){
         secondCard = this;
 
         checkForMatch();
+        
     }
     
-function checkForMatch(){
+    //If cards match it will freeze those cards and it will prevent them from flipping back - managed with dataset html atribute
+    function checkForMatch(){
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
 
     isMatch ? disableCards() : unflipCards();
-}
+    }
 
-function disableCards(){
+    //Matched card will be disabled for clicks once they are flipped
+    function disableCards(){
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
+    console.log("Its a match")
 
     resetBoard();
-}
+    }
 
-function unflipCards(){
+    //If cards don't match it will flip the cards back in 0.5s and you will have a new attempt to make
+    function unflipCards(){
     lockBoard = true;
 
     setTimeout(() => {
@@ -46,19 +52,35 @@ function unflipCards(){
 
        resetBoard();
     }, 1000);
-}
 
-function resetBoard(){
+    addMove();
+
+    }
+
+    //Moves
+    const movesContainer = document.querySelector(".moves");
+    let moves = 0;
+    movesContainer.innerHTML = 0;
+    function addMove() {
+    moves++;
+    movesContainer.innerHTML = moves;
+
+    rating();
+    }
+
+    //If second card match with first card it will return from the function
+    function resetBoard(){
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
+    }
 
-}
-
-(function shuffle(){
+    //Use to shuffle cards - 6 front and 6 back side = 12
+    (function shuffle(){
     cards.forEach(card => {
         let randomPos = Math.floor(Math.random() * 12);
         card.style.order = randomPos;
     });
-})();
+    })();
 
-cards.forEach(card => card.addEventListener('click', flipCard))
+    cards.forEach(card => card.addEventListener('click', flipCard))
+
