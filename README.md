@@ -60,7 +60,8 @@ The site was deployed to GitHub pages. The steps to deploy are as follows: In th
 
 ### Content
 
-### Media
+### Design
+
 
 ### Credits
 
